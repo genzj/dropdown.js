@@ -160,6 +160,10 @@
             $option.attr("value", val);
             $option.text(val);
             $select.append($option);
+            methods._select($dropdown, $option);
+            // trigger change event, if declared on the original selector
+            $select.change();
+            return false;
 
           });
         }
